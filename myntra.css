@@ -1,22 +1,38 @@
+body, div{
+    margin: 0;
+    padding:0;
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
 .myntra-logo {
     display: flex;
-    margin-left: 2%;
+    margin-left: 3%;
     align-items: center;
-
 }
 
 .logo {
     width: 53px;
-    height:36px;
+    height: 36px;
 }
 
 .desktop-container {
     display: flex;
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
 
     box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
-    height: 75px;
     justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left:0;
+    background-color: #fff;
+    height: 80px;
+    width: 100vw;
+    margin-bottom: 5px;
+ 
 
 }
 
@@ -31,13 +47,58 @@
     gap: 30px;
     padding-left: 5px;
     width: auto;
-    margin: 0;
+    margin-left: 3vw; 
+    height:80px;
+    /* width: 35vw; */
+    font-size: 14px;
+    justify-content: space-between;
+    
     
 }
+
+.desktop-navlink {
+    display: flex;
+    height:80px;
+    align-items: center;
+    /* border-bottom-width: 100vw; */
+    
+}
+
+.desktop-navcontent {
+    display: flex;
+    height:80px;
+    align-items: center;
+    border-bottom:2px solid transparent;
+    /* transition: 1s; */
+}
+
+.desktop-navcontent:hover {
+    border-bottom:4px solid crimson;
+}
+
+.desktop-navcontent:hover .list{
+    display: block;
+    overflow: visible;
+    visibility: visible;
+
+}
+
+.content:hover {
+    display: none;
+    overflow: visible;
+    visibility: visible;
+}
+
 
 a {
     text-decoration: none;
     color: black;
+}
+
+span {
+    color: #282c3f;
+    font-weight: 500;
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
 
 .actions {
@@ -51,11 +112,10 @@ a {
 .desktop-query {
     display: flex;
     align-items: center;
-    color: #696e79;
+
     border: 1px solid #f5f5f6;
     border-radius: 0 4px 4px 0;
     justify-content: flex-start;
-    margin-left:20px;
     width: 30%;
     padding:20px 20px 20px;
     height: 34px;
@@ -65,6 +125,12 @@ a {
 .search {
     display: flex;
     align-items: center;
+
+    height: 100%;
+    padding-left: 15px;
+
+    color: #696e79;
+    background: transparent;
 }
 
 .searchbox {
@@ -74,13 +140,23 @@ a {
 }
 
 .inputsearch {
+    display: flex;
     box-sizing: content-box;
     width: 100%;
+    height: 100%;
     justify-content: flex-start;
     border: none;
-    
-    
+    outline: none;
+    color: #696e79;
+    background: transparent;
+    padding-left: 8px;
 }
+
+/* input:focus {
+    border: none;
+    outline: none;
+
+} */
 
 .desktop-query > * {
     height: 38px;
@@ -102,8 +178,183 @@ a {
 .banner {
     width: 100%;
     height: auto;
-    margin: 40px 0px 15px 0px;
+    margin: 90px 0px 15px 0px;
+    padding:20px;
 }
 
+.text-banner-title {
+    text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    margin: 50px 0 10px 30px;
+    max-height: 5em;
+    font-weight: bold;
+}
 
+.text-banner-subtitle {
+    margin-top: 0;
+    font-weight: 400;
+    line-height: 1em;
+    max-height: 3em;
+    color: #7e818c;
+    margin-bottom: 50px;
+}
 
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    grid-row: 8;
+}
+
+.row1-image {
+    display: flex;
+    width: 100%;
+}
+
+.free-shipping {
+    right: 0;
+    position: fixed;
+    bottom: 130px;
+    width: 44px;
+    height: 288px;
+    background-color: #535766;
+    color: #fff;
+}
+
+.free-shipping-text {
+    color: #fff;
+    display:inline-block;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    word-spacing: 1px;
+    bottom: 0;
+    
+}
+
+.content {
+    width: 100vw;
+    height: 550px;
+    margin: 20px;
+    position: fixed;
+    top:60px;
+    left:0;
+    display:none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    visibility: hidden;
+    
+
+}
+
+.list {
+    padding: 20px;
+    height:550px;
+    width: 1200px;
+    background-color: #fff;
+    display:none;
+    /* visibility: hidden; */
+    /* display:block; */
+
+}
+
+.list > * {
+    float: left;
+    /* display:block; */
+    width:220px ;
+    height:220px;
+    position:relative;
+}
+
+.mens-list {
+    padding-left: 23px;
+    list-style-type: none;
+    word-spacing: 2px;
+}
+
+.womens-list {
+    padding-left: 23px;
+    list-style-type: none;
+    word-spacing: 2px;
+}
+
+.list-heading {
+    font-weight: 500;
+    list-style-type: none;
+    color: crimson;
+    padding-left: 23px;
+    padding-top: 10px; 
+}
+
+li {
+    padding: 5px;
+    font-weight: 400;
+}
+
+.footer-container {
+    display:block;
+    padding-top:40px;
+    max-width: 1080px;
+    margin: auto;
+    min-width: 980px;
+    height: 100vh;
+}
+
+.shoplinks {
+    float:left;
+    display: block;
+    list-style: none;   
+    
+    color: #696b79;
+    font-size: 12px;
+
+    padding-right: 20px;
+
+}
+
+.customer-policies {
+    float:left;
+    display: block;
+    list-style: none;
+    width: 15%;
+    color: #696b79;
+    font-size: 12px;
+
+    padding-right: 20px;
+}
+
+.customer-experience {
+    float:left;
+    display: block;
+    list-style: none;
+    width: 360px;
+    color: #696b79;
+    font-size: 12px;
+
+    padding-right: 20px;
+}
+
+.keep-in-touch img {
+    width:20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.promises {
+    width: 250px;
+    float: left;
+    
+   
+}
+ .promises * {
+    list-style-type: none;
+ }
